@@ -15,15 +15,6 @@ public class AddService {
 
     }
 
-    public List<EmployeeDetails> add(EmployeeDetails employeeDetails){
-
-        List<EmployeeDetails> listEmployee = new ArrayList<EmployeeDetails>();
-
-
-
-        return listEmployee;
-    }
-
     public List<Address> add(Address address){
       List<Address> listAddress = new ArrayList<Address>();
 
