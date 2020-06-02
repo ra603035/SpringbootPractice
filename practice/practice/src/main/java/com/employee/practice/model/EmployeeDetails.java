@@ -107,8 +107,8 @@ public class EmployeeDetails {
                 ", department='" + department + '\'' +
                 ", address=" + address +
                 ", veichel=" + veichel +
-
                 '}';
     }
 }
+
 

@@ -10,7 +10,7 @@ public class Veichel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int veichelId;
     private String name;
     private String chesisNo;
     private float price;
@@ -24,15 +24,12 @@ public class Veichel {
         this.price = price;
     }
 
-    public int getId() {
-
-        return id;
+    public int getVeichelId() {
+        return veichelId;
     }
 
-
-    public void setId(int id) {
-
-        this.id = id;
+    public void setVeichelId(int veichelId) {
+        this.veichelId = veichelId;
     }
 
     public String getName() {
@@ -66,7 +63,7 @@ public class Veichel {
     @Override
     public String toString() {
         return "Veichel{" +
-                "id=" + id +
+                "veichelId=" + veichelId +
                 ", name='" + name + '\'' +
                 ", chesisNo='" + chesisNo + '\'' +
                 ", price=" + price +
