@@ -15,6 +15,9 @@ public class Veichel {
     private String chesisNo;
     private float price;
 
+    public Veichel() {
+    }
+
     public Veichel(String name, String chesisNo, float price){
         this.name = name;
         this.chesisNo = chesisNo;

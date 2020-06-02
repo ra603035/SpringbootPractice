@@ -49,8 +49,8 @@ public class EmployeeDetailsServiceImpl implements EmployeeDetailsService {
     @Override
     public void populateEmployeeDetails() {
         Address address = new Address(101,"5th","bengaluru","karnataka","india",560076);
-        //Veichel veichel = new Veichel("bike", "560000",100000.0f);
-        EmployeeDetails employeeDetails1 = new EmployeeDetails("Rahul",25,100000.0f,"IT",address);
+        Veichel veichel = new Veichel("bike", "560000",100000.0f);
+        EmployeeDetails employeeDetails1 = new EmployeeDetails("Rahul",25,100000.0f,"IT",address,veichel);
         employeeDetailsRepo.save(employeeDetails1);
     }
 }

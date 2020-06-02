@@ -16,16 +16,19 @@ public class EmployeeDetails {
     private String department;
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Veichel veichel;
 
     public EmployeeDetails() {
     }
 
-    public EmployeeDetails(String name, int age, float salary, String department, Address address) {
+    public EmployeeDetails(String name, int age, float salary, String department, Address address,Veichel veichel) {
         this.name = name;
         this.age = age;
         this.salary = salary;
         this.department = department;
         this.address = address;
+        this.veichel=veichel;
 
     }
 
@@ -86,6 +89,13 @@ public class EmployeeDetails {
         this.address = address;
     }
 
+    public Veichel getVeichel() {
+        return veichel;
+    }
+
+    public void setVeichel(Veichel veichel) {
+        this.veichel = veichel;
+    }
 
     @Override
     public String toString() {
@@ -96,6 +106,7 @@ public class EmployeeDetails {
                 ", salary=" + salary +
                 ", department='" + department + '\'' +
                 ", address=" + address +
+                ", veichel=" + veichel +
 
                 '}';
     }

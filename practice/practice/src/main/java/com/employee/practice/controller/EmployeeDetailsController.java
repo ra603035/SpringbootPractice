@@ -29,8 +29,16 @@ public class EmployeeDetailsController {
    }
    @PostMapping("/populate-employee-details")
    public void populateEmployeeDetails(){
-     employeeDetailsService.populateEmployeeDetails();
+        employeeDetailsService.populateEmployeeDetails();
    }
 
+   @DeleteMapping("/delete-employee/{id}")
+   public void deleteEmployeeDetailsById(@PathVariable int id){
+        employeeDetailsService.deleteEmployeeDetailsByEmpId(id);
+   }
 
+   @DeleteMapping("/delete-employee")
+   public void deleteEmployeeDetails(@RequestBody EmployeeDetails employeeDetails){
+        employeeDetailsService.deleteEmployeeDetails(employeeDetails);
+   }
 }
