@@ -1,6 +1,8 @@
 package com.employee.practice.controller;
 
+import com.employee.practice.model.Address;
 import com.employee.practice.model.EmployeeDetails;
+import com.employee.practice.model.Veichel;
 import com.employee.practice.service.EmployeeDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +14,7 @@ public class EmployeeDetailsController {
 
     @Autowired
     private EmployeeDetailsService employeeDetailsService;
+
 
     @PostMapping("/add-employee")
    public void addEmployeeDetails(@RequestBody EmployeeDetails employeeDetails){
@@ -40,5 +43,25 @@ public class EmployeeDetailsController {
    @DeleteMapping("/delete-employee")
    public void deleteEmployeeDetails(@RequestBody EmployeeDetails employeeDetails){
         employeeDetailsService.deleteEmployeeDetails(employeeDetails);
+   }
+
+   @GetMapping("/get-address/{addressId}")
+   public Address getAddressByAddressId(@PathVariable int addressId){
+        return employeeDetailsService.getAddressByAddressId(addressId);
+   }
+
+   @GetMapping("/get-address")
+   public List<Address> getAllAddress(){
+        return (List)employeeDetailsService.getAllAddress();
+   }
+
+   @GetMapping("/get-veichel/{veichelId}")
+   public Veichel getVeichelByVeichelId(@PathVariable int veichelId){
+        return employeeDetailsService.getVeichelByVeichelId(veichelId);
+   }
+
+   @GetMapping("/get-veichel")
+   public List<Veichel> getAllVeichel(){
+        return (List)employeeDetailsService.getAllAddress();
    }
 }
